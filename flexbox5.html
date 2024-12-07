@@ -14,34 +14,44 @@
             flex-direction: column;
             gap: 4px;
             height: calc(100vh - 4px);
+            overflow: hidden;
         }
         nav, main, aside, footer {
             border: 1px solid black;
         }
         
+        nav {
+            display: flex;
+            flex-direction: column;
+            padding: 4px;
+            gap: 4px;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
         .ncont1 {
             display: flex;
             flex-direction: row;
-            gap: 3px;
+            gap: 4px;
             align-items: center;
-            justify-content: center;
         }
+
         .nredbox1 {
             background-color: red;
-            height: 30px;
-            width: 30px;
+            height: 40px;
+            width: 40px;
         }
-        .ncont2{
+
+        .ncont2 {
             display: flex;
             flex-direction: row;
-            gap: 3px;
-            justify-content: center;
-
+            gap: 4px;
         }
+
         .nredbox2 {
             background-color: red;
             height: 30px;
-            width: 55px;
+            width: 60px;
         }
 
         .container {
@@ -52,7 +62,9 @@
 
         }
         main{
+            display: flex;
             flex-grow: 1;
+            overflow-y: hidden; 
         }
         .mparent{
             display: flex; 
@@ -75,9 +87,12 @@
             
         }
         .mc1boxes{
+            display: flex;
+            gap: 4px;
+            padding: 4px;
+            height: 75px;
+            width: 75px;
             border: 1px solid black;
-            width: 5vw;
-            height: 10vh;
         }
         .mcont2{
             border: 1px solid black;
@@ -91,9 +106,12 @@
            
         }
         .mc2boxes{
+            display: flex;
+            gap: 4px;
+            padding: 4px;
+            height: 75px;
+            width: 75px;
             border: 1px solid black;
-            width: 5vw;
-            height: 10vh;
         }
 
         aside {
@@ -108,35 +126,49 @@
             width: 15vw;
             height: 25px;
         }
-        .fparent{
-            display: flex;
-            align-items: center;
-         }
-        
-        
-      .fbox1{
-        background-color: red;
-        width: 30px;
-        height: 30px;
-         }
-
-         .fthird{
+        footer {
             display: flex;
             flex-direction: row;
-            gap: 2px;
-            justify-content: flex-end;
+            justify-content: space-between;
         }
-        .fbox2 {
+
+        .footercont1 {
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            align-items: center;
+            margin-left: 4px;
+        }
+
+        .flexcprt {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footerredbox {
             background-color: red;
-            height: 15px;
-            width: 15px;
-      }
+            height: 30px;
+            width: 30px;
+        }
+
+        .footercont2 {
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            align-items: center;
+            margin-right: 4px;
+        }
+
+        .footerredbox2 {
+            background-color: red;
+            height: 20px;
+            width: 20px;
+        }
    
 
     </style>
 </head>
 <body>
-    <nav>
         <nav>
             <div class="ncont1">
                 <div class="nredbox1"></div>
@@ -153,7 +185,6 @@
                 <div class="nredbox2"></div>
             </div>
         </nav>
-    </nav>
     <div class="container">
         <main>
             <div class="mparent">
@@ -198,21 +229,20 @@
         </aside>
     </div>
     <footer>
-        <div class="fparent">
-            <div class="fbox1"></div>
-            <div>FLEXBOX</div>
+        <div class="footercont1">
+            <div class="footerredbox"></div>
+            <div class="flexcprt">
+                <div>FLEXBOX</div>
+                <div>©Copyright All rights reserved.</div>
+            </div>
         </div>
-        <div class="ftext">©Copyright All rights reserved</div>
 
-        <div class="fthird">
-            <div class="fbox2"></div>
-            <div class="fbox2"></div>
-            <div class="fbox2"></div>
-            <div class="fbox2"></div>
-            <div class="fbox2"></div>
+        <div class="footercont2">
+            <div class="footerredbox2"></div>
+            <div class="footerredbox2"></div>
+            <div class="footerredbox2"></div>
+            <div class="footerredbox2"></div>
+            <div class="footerredbox2"></div>
         </div>
-      
-       
-    </div>
     </footer>
 </html>
